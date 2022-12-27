@@ -1,0 +1,17 @@
+schema:
+  - internal/infra/graph/*.graphqls
+
+exec:
+  filename: internal/infra/graph/generated.go
+  package: graph
+
+models:
+  VerifyPassword:
+    model: github.com/matheus-gondim/go-password-validation/internal/domain/entities.VerifyPassword
+
+  Rule:
+    model: github.com/matheus-gondim/go-password-validation/internal/domain/entities.Rule
+
+  Verified:  
+    model: github.com/matheus-gondim/go-password-validation/internal/domain/entities.Verified
+

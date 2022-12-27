@@ -1,0 +1,20 @@
+input Rule {
+  rule: String!
+  value: Int!
+}
+
+type Verified {
+  verify: Boolean!
+  noMatch: [String!]!
+}
+
+input VerifyPassword {
+  password: String!
+  rules: [Rule!]
+}
+
+
+type Query {
+  verify(input: VerifyPassword!): Verified!
+}
+
